@@ -7,13 +7,13 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///musikkalbum.sqlite3'
 db = SQLAlchemy(app)
 
 
-class ski(db.Model):
+class musikkalbum(db.Model):
     id = db.Column('id', db.Integer, primary_key=True)
-    merke = db.Column('merke', db.String(100))
-    modell = db.Column('modell', db.String(100))
-    vekt = db.Column('vekt', db.Integer)
-    bredde = db.Column('bredde', db.Integer)
-    pris = db.Column('pris', db.Integer)
+    name = db.Column('name', db.String(100))
+    artist = db.Column('artist', db.String(100))
+    release_date = db.Column('release_date', db.Integer)
+    genre = db.Column('genre', db.String(100))
+    best_song = db.Column('best_song', db.String(100))
     bilde = db.Column('bilde', db.String(100))
 
 
