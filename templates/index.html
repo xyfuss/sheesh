@@ -12,7 +12,7 @@
 
   <body>
     <div id="pakker">
-      <h1>Ski</h1>
+      <h1>Albumer</h1>
       <br />
       <a class="meny" href="/">Hjem </a>
       <a class="meny" href="/liste/navn">Liste </a>
@@ -28,17 +28,14 @@
           <th>Rating</th>
         </thead>
         <tbody>
-          {% for fjell in fjellene %}
+          {% for album in musikkalbumene %}
           <tr>
-            <td width="80px">
-              <img
-                src="{{ url_for('static', filename='img/'+fjell.bilde ) }}"
-                width="80px"
-              />
-            </td>
-            <td>{{fjell.navn }}</td>
-            <td>{{fjell.hoyde}}</td>
-            <td>{{fjell.kommune}}</td>
+            <td>{{album.name }}</td>
+            <td>{{album.artist}}</td>
+            <td>{{album.release_date}}</td>
+            <td>{{album.genre}}</td>
+            <td>{{album.best_song}}</td>
+            <td>{{album.overall_rating}}</td>
           </tr>
           {% endfor %}
         </tbody>
