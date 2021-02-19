@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>BIG CHUNGUS</header>
-    <nav>
-      <a href=""></a>
-      <a href=""></a>
-      <a href=""></a>
-    </nav>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ski</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+</head>
+
+<body>
+
+    <div id=pakker>
+        <h1>Ski</h1>
+        <br>
+        <a class="meny" href="/">Hjem </a>
+        <a class="meny" href="/liste/navn">Liste </a>
+        <br>
+        <br>
+        <table>
+            <thead>
+                <th>Bilde</a></th>
+                <th><a class="meny" href="../liste/navn">Navn</a></th>
+                <th><a class="meny" href="../liste/hoyde">Høyde</a></th>
+                <th><a class="meny" href="../liste/kommune">Kommune</a></th>
+            </thead>
+            <tbody>
+                {% for fjell in fjellene %}
+                <tr>
+                    <td width="80px">
+                        <img src="{{ url_for('static', filename='img/'+fjell.bilde ) }}" width="80px">
+                    </td>
+                    <td>{{ fjell.navn }}</td>
+                    <td>{{fjell.hoyde}}</td>
+                    <td>{{fjell.kommune}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
 </html>
