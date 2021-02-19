@@ -14,23 +14,25 @@ class musikkalbum(db.Model):
     release_date = db.Column('release_date', db.Integer)
     genre = db.Column('genre', db.String(100))
     best_song = db.Column('best_song', db.String(100))
-    bilde = db.Column('bilde', db.String(100))
+    overall_rating = db.Column('overall_rating', db.Integer)
+    cover = db.Column('cover', db.String(200))
 
 
-def __init__(self, merke, modell, vekt, bredde, pris, bilde):
-    self.merke = merke
-    self.modell = modell
-    self.vekt = vekt
-    self.bredde = bredde
-    self.pris = pris
-    self.bilde = bilde
+def __init__(self, name, artist, release_date, genre, best_song, overall_rating, cover):
+    self.name = name
+    self.artist = artist
+    self.release_date = release_date
+    self.genre = genre
+    self.best_song = best_song
+    self.overall_rating = overall_rating
+    self.cover = cover
 
 
-@app.route('/')
+@ app.route('/')
 def index():
-    ski = db.engine.execute('SELECT * FROM ski ORDER BY bredde DESC')
+    ski = db.engine.execute('SELECT * FROM musikkalbum')
 
-    return render_template('index.html', ski=ski)
+    return render_template('index.html', musikkalbum=musikkalbum)
 
 
 app.run(debug=True)
