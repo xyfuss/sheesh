@@ -30,7 +30,7 @@ def __init__(self, name, artist, release_date, genre, best_song, overall_rating,
 
 @ app.route('/')
 def index():
-    ski = db.engine.execute('SELECT * FROM musikkalbum')
+    musikkalbum = db.engine.execute('SELECT * FROM album')
 
     return render_template('index.html', musikkalbum=musikkalbum)
 
