@@ -30,6 +30,7 @@
         <tbody>
           {% for album in musikkalbum %}
           <tr>
+            <img src="static/img/{{album.cover}}" alt="">
             <td>{{album.name }}</td>
             <td>{{album.artist}}</td>
             <td>{{album.release_date}}</td>
