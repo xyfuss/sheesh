@@ -1,7 +1,13 @@
 #main {
   display: grid;
+  background-color: black;
   grid-template-columns: 1fr 1fr 1fr;
 }
+.album {
+  color: white;
+  background-color: rgb(0, 0, 0);
+}
+
 .album img {
   width: 90%;
 }
