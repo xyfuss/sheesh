@@ -2,6 +2,7 @@
   display: grid;
   background-color: black;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
 }
 .album {
   color: white;
