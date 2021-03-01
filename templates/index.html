@@ -6,7 +6,7 @@
     <title>Ski</title>
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='css/main.css') }}"
+      href="{{ url_for('static', filename='main.css') }}"
     />
   </head>
 
@@ -18,29 +18,22 @@
       <a class="meny" href="/liste/navn">Liste </a>
       <br />
       <br />
-      <table>
-        <thead>
-          <th>Album Name</th>
-          <th>Artist Name</th>
-          <th>Release Date</th>
-          <th>Genre</th>
-          <th>Best Song</th>
-          <th>Rating</th>
-        </thead>
-        <tbody>
-          {% for album in musikkalbum %}
-          <tr>
-            <img src="static/img/{{album.cover}}" alt="">
-            <td>{{album.name }}</td>
-            <td>{{album.artist}}</td>
-            <td>{{album.release_date}}</td>
-            <td>{{album.genre}}</td>
-            <td>{{album.best_song}}</td>
-            <td>{{album.overall_rating}}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+    <div id="main">
+      {% for album in musikkalbum %}
+      <div class="album">
+        <img src="../static/img/{{album.cover}}" alt="">
+        <h1>{{album.name}}</h1>
+        <h2>{{album.artist}}</h2>
+        <h2>{{album.release_date}}</h2>
+        <h2>{{album.genre}}</h2>
+        <h2>{{album.best_song}}</h2>
+        <div class="rating">
+          <h1>{{album.overall_rating}}</h1>
+        </div>
+
+      </div>
+      {% endfor %}
+    </div>
     </div>
   </body>
 </html>
