@@ -1,8 +1,7 @@
 #main {
   display: grid;
-  background-color: black;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 60px;
 }
 .album {
   color: white;
@@ -10,5 +9,14 @@
 }
 
 .album img {
-  width: 90%;
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 45px;
+}
+
+header {
+  background-color: rgb(0, 0, 0);
+  height: 18vh;
 }
