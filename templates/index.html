@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ski</title>
+    <title>Mumble</title>
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='main.css') }}"
@@ -11,6 +11,7 @@
   </head>
 
   <body>
+<<<<<<< HEAD
 
     <header>
       hei
@@ -28,11 +29,36 @@
         <h2>{{album.best_song}}</h2>
         <div class="rating">
           <h1>{{album.overall_rating}}</h1>
+=======
+    <div id="pakker">
+      <h1>Albumer</h1>
+      <br />
+      <a class="meny" href="/">Hjem </a>
+      <a class="meny" href="/liste/navn">Liste </a>
+      <br />
+      <br />
+      <div id="main">
+        {% for album in musikkalbum %}
+        <div class="album">
+          <img src="../static/img/{{album.cover}}" alt="" />
+          <h1>{{album.name}}</h1>
+          <h2>{{album.artist}}</h2>
+          <h2>{{album.release_date}}</h2>
+          <h2>{{album.genre}}</h2>
+          <h2>{{album.best_song}}</h2>
+          <div class="rating">
+            <h1>{{album.overall_rating}}</h1>
+          </div>
+>>>>>>> 8ecc0a1356a1c07e28484dc783f03735a0fac867
         </div>
-
+        {% endfor %}
       </div>
+<<<<<<< HEAD
       {% endfor %}
     </div>
     
+=======
+    </div>
+>>>>>>> 8ecc0a1356a1c07e28484dc783f03735a0fac867
   </body>
 </html>
