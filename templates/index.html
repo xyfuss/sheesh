@@ -11,10 +11,10 @@
   </head>
 
   <body>
-<<<<<<< HEAD
 
     <header>
       hei
+      <img src="../static/img/mumblelogo.png" alt="">
     </header>
 
    
@@ -29,27 +29,6 @@
         <h2>{{album.best_song}}</h2>
         <div class="rating">
           <h1>{{album.overall_rating}}</h1>
-=======
-    <div id="pakker">
-      <h1>Albumer</h1>
-      <br />
-      <a class="meny" href="/">Hjem </a>
-      <a class="meny" href="/liste/navn">Liste </a>
-      <br />
-      <br />
-      <div id="main">
-        {% for album in musikkalbum %}
-        <div class="album">
-          <img src="../static/img/{{album.cover}}" alt="" />
-          <h1>{{album.name}}</h1>
-          <h2>{{album.artist}}</h2>
-          <h2>{{album.release_date}}</h2>
-          <h2>{{album.genre}}</h2>
-          <h2>{{album.best_song}}</h2>
-          <div class="rating">
-            <h1>{{album.overall_rating}}</h1>
-          </div>
->>>>>>> 8ecc0a1356a1c07e28484dc783f03735a0fac867
         </div>
         {% endfor %}
       </div>
