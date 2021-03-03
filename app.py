@@ -53,7 +53,6 @@ def album(id):
         f'SELECT * FROM album WHERE id = "{id}" ')
     sanger = db.engine.execute(
         f'SELECT * FROM sanger WHERE albumid = "{id}"')
-    print(sanger)
     return render_template('albumpage.html', musikkalbum=musikkalbum, sanger=sanger)
 
 
