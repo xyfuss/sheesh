@@ -18,7 +18,7 @@ class musikkalbum(db.Model):
     cover = db.Column('cover', db.String(200))
 
 
-def __init__(self, name, artist, release_date, genre, best_song, overall_rating, cover):
+def __init__(self, name, artist, release_date, genre, best_song, overall_rating, cover, songname, albumid, rating, track_number):
     self.name = name
     self.artist = artist
     self.release_date = release_date
@@ -26,6 +26,18 @@ def __init__(self, name, artist, release_date, genre, best_song, overall_rating,
     self.best_song = best_song
     self.overall_rating = overall_rating
     self.cover = cover
+    self.songname = name
+    self.albumid = albumid
+    self.rating = rating
+    self.track_number = track_number
+
+
+class sanger(db.Model):
+    songid = db.Column('id', db.Integer, primary_key=True)
+    albumid = db.Column('albumid', db.Integer, db.ForeignKey('album.id'))
+    songname = db.Column('name', db.String(100))
+    rating = db.Column('rating', db.Integer)
+    track_number = db.Column('track_number', db.Integer)
 
 
 @ app.route('/')
@@ -37,10 +49,12 @@ def index():
 
 @ app.route('/<id>')
 def album(id):
-        musikkalbum = db.engine.execute(
-            f'SELECT * FROM album WHERE id = "{id}" ')
-        sanger = db.engine.execute(
-            f'SELECT * FROM sanger WHERE albumid = "{id}"')
+    musikkalbum = db.engine.execute(
+        f'SELECT * FROM album WHERE id = "{id}" ')
+    sanger = db.engine.execute(
+        f'SELECT * FROM sanger WHERE albumid = "{id}"')
+    print(sanger)
     return render_template('albumpage.html', musikkalbum=musikkalbum, sanger=sanger)
+
 
 app.run(debug=True)
