@@ -33,6 +33,3 @@ def index():
     musikkalbum = db.engine.execute('SELECT * FROM album')
 
     return render_template('index.html', musikkalbum=musikkalbum)
-
-
-app.run(debug=True)
