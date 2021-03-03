@@ -35,4 +35,12 @@ def index():
     return render_template('index.html', musikkalbum=musikkalbum)
 
 
+@ app.route('/<id>')
+def album(id):
+        musikkalbum = db.engine.execute(
+            f'SELECT * FROM album WHERE id = "{id}" ')
+        sanger = db.engine.execute(
+            f'SELECT * FROM sanger WHERE albumid = "{id}"')
+    return render_template('albumpage.html', musikkalbum=musikkalbum, sanger=sanger)
+
 app.run(debug=True)
