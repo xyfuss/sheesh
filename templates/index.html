@@ -13,7 +13,6 @@
   <body>
 
     <header>
-      hei
       <img src="../static/img/mumblelogo.png" alt="">
     </header>
 
@@ -22,22 +21,20 @@
       {% for album in musikkalbum %}
       <div class="album">
         <img src="../static/img/{{album.cover}}" alt="">
-        <h1>{{album.name}}</h1>
-        <h2>{{album.artist}}</h2>
-        <h2>{{album.release_date}}</h2>
-        <h2>{{album.genre}}</h2>
-        <h2>{{album.best_song}}</h2>
+        <div class="text">
+        <h1 class="name">{{album.name}}</h1>
+        <h2 class="artist">{{album.artist}}</h2>
+        <h2 class="date">{{album.release_date}}</h2>
+        <h2>GENRE: {{album.genre}}</h2>
+        <h2>BEST SONG: {{album.best_song}}</h2>
         <div class="rating">
           <h1>{{album.overall_rating}}</h1>
         </div>
-        {% endfor %}
       </div>
-<<<<<<< HEAD
+        
+      </div>
       {% endfor %}
     </div>
     
-=======
-    </div>
->>>>>>> 8ecc0a1356a1c07e28484dc783f03735a0fac867
   </body>
 </html>
