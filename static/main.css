@@ -21,8 +21,11 @@ body {
 }
 
 .rating {
+  position: relative;
+  right: 50px;
   width: 60px;
   height: 60px;
+  bottom: 20px;
   background-color: #61d2a4;
   border-radius: 50%;
   text-align: center;
