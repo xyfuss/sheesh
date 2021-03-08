@@ -21,20 +21,19 @@ body {
 }
 
 .rating {
-  position: relative;
-  right: 50px;
-  width: 60px;
+  position: absolute;
   height: 60px;
-  bottom: 20px;
+  width: 60px;
   background-color: #61d2a4;
   border-radius: 50%;
   text-align: center;
-  margin-left: auto;
+  bottom: 20px;
+  right: 40px;
 }
 
 .rating h1 {
   position: relative;
-  top: 10px;
+  bottom: 10px;
 }
 
 .album img {
@@ -63,6 +62,12 @@ header img {
   left: 20px;
 }
 
+.genre,
+.best_song {
+  position: relative;
+  bottom: 20px;
+}
+
 .date {
   position: relative;
   left: 250px;
@@ -70,14 +75,16 @@ header img {
 }
 
 a {
+  position: relative;
   text-decoration: none;
+  height: 105vh;
 }
-/* albumpage */
 
 #topbox {
-  background-color: black;
+  background-color: red;
 }
 
 #topbox h1 {
   color: white;
+  margin: none;
 }

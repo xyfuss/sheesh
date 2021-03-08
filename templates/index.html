@@ -11,22 +11,26 @@
   </head>
 
   <body>
-
     <header>
-      <img src="../static/img/mublbelogo.png" alt="">
+<<<<<<< HEAD
+      <img src="../static/img/mublbelogo.png" alt="" />
+=======
+      <a href="/">
+        <img src="../static/img/mublbelogo.png" alt="">
+      </a>
+>>>>>>> d3137eaeee33b5865cc8f5b7e8cc6260757f8805
     </header>
 
-   
     <div id="main">
       {% for album in musikkalbum %}
       <a href="/{{album.id}}" class="album">
-        <img src="../static/img/{{album.cover}}" alt="">
+        <img src="../static/img/{{album.cover}}" alt="" />
         <div class="text">
           <h1 class="name">{{album.name}}</h1>
           <h2 class="artist">{{album.artist}}</h2>
           <h2 class="date">{{album.release_date}}</h2>
-          <h2>GENRE: {{album.genre}}</h2>
-          <h2>BEST SONG: {{album.best_song}}</h2>
+          <h2 class="genre">GENRE: {{album.genre}}</h2>
+          <h2 class="best_song">BEST SONG: {{album.best_song}}</h2>
         </div>
         <div class="rating">
           <h1>{{album.overall_rating}}</h1>
@@ -34,6 +38,5 @@
       </a>
       {% endfor %}
     </div>
-    
   </body>
 </html>
