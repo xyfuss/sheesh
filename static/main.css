@@ -80,11 +80,26 @@ a {
   height: 105vh;
 }
 
+/* albumpage */
+
 #topbox {
-  background-color: red;
+  background-color: black;
+  margin: none;
 }
 
 #topbox h1 {
   color: white;
   margin: none;
+}
+
+#mainbody {
+  background-color: black;
+  width: 80%;
+}
+
+#songslist h1,
+h2,
+h3,
+h4 {
+  color: white;
 }

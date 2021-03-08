@@ -11,11 +11,19 @@
     />
   </head>
   <body>
-    <header id="topbox">
-      <h1>Ka inni faen</h1>
-    </header>
-    {% for sang in sanger %}
-    <h1>{{sang.name}}</h1>
-    {% endfor %}
+    <div id="mainbody">
+      <div id="divider">
+        {% for album in musikkalbum %}
+        <img id="albumlogo" src="../static/img/{{album.cover}}" alt="" />
+        <h1 id="albumtitle">{{album.name}}</h1>
+        {% for sang in sanger %}
+        <div id="songslist">
+          <h2 id="songtrack">{{sang.track_number}}</h2>
+          <h3 id="songtitle">{{sang.name}}</h3>
+          <h4 id="songrating">{{sang.rating}}</h4>
+        </div>
+        {% endfor %} {% endfor %}
+      </div>
+    </div>
   </body>
 </html>
