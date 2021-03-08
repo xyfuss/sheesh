@@ -22,14 +22,11 @@ body {
 
 .rating {
   position: relative;
-  right: 50px;
-  width: 60px;
   height: 60px;
-  bottom: 20px;
+  width: 60px;
   background-color: #61d2a4;
   border-radius: 50%;
   text-align: center;
-  margin-left: auto;
 }
 
 .rating h1 {
@@ -72,7 +69,6 @@ header img {
 a {
   text-decoration: none;
 }
-/* albumpage */
 
 #topbox {
   background-color: black;
