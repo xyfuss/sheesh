@@ -13,7 +13,9 @@
   <body>
 
     <header>
-      <img src="../static/img/mublbelogo.png" alt="">
+      <a href="/">
+        <img src="../static/img/mublbelogo.png" alt="">
+      </a>
     </header>
 
    
@@ -25,8 +27,8 @@
           <h1 class="name">{{album.name}}</h1>
           <h2 class="artist">{{album.artist}}</h2>
           <h2 class="date">{{album.release_date}}</h2>
-          <h2>GENRE: {{album.genre}}</h2>
-          <h2>BEST SONG: {{album.best_song}}</h2>
+          <h2 class="genre">GENRE: {{album.genre}}</h2>
+          <h2 class="best_song">BEST SONG: {{album.best_song}}</h2>
         </div>
         <div class="rating">
           <h1>{{album.overall_rating}}</h1>
