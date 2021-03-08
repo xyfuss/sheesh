@@ -72,3 +72,12 @@ header img {
 a {
   text-decoration: none;
 }
+/* albumpage */
+
+#topbox {
+  background-color: black;
+}
+
+#topbox h1 {
+  color: white;
+}
