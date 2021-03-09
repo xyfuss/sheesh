@@ -17,15 +17,15 @@
       </a>
     </header>
     <div id="mainbody">
-        {% for album in musikkalbum %}
-        <img id="albumcover" src="../static/img/{{album.cover}}" alt="" />
-        <h1 id="albumtitle">{{album.name}}</h1>
-        {% for sang in sanger %}
-        <div id="songlist">
-          <h2 id="songtrack">{{sang.track_number}}</h2>
-          <h3 id="songtitle">{{sang.name}}</h3>
-        </div>
-        {% endfor %} {% endfor %}
+      {% for album in musikkalbum %}
+      <img id="albumcover" src="../static/img/{{album.cover}}" alt="" />
+      <h1 id="albumtitle">{{album.name}}</h1>
+      {% for sang in sanger %}
+      <div id="songlist">
+        <h2 id="songtrack">{{sang.track_number}}</h2>
+        <h3 id="songtitle">{{sang.name}}</h3>
+      </div>
+      {% endfor %} {% endfor %}
     </div>
   </body>
 </html>

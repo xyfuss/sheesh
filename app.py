@@ -16,9 +16,10 @@ class musikkalbum(db.Model):
     best_song = db.Column('best_song', db.String(100))
     overall_rating = db.Column('overall_rating', db.Integer)
     cover = db.Column('cover', db.String(200))
+    text = db.Column('text', db.String(500))
 
 
-def __init__(self, name, artist, release_date, genre, best_song, overall_rating, cover, songname, albumid, rating, track_number):
+def __init__(self, name, artist, release_date, genre, best_song, overall_rating, cover, songname, albumid, rating, track_number, text):
     self.name = name
     self.artist = artist
     self.release_date = release_date
@@ -26,6 +27,7 @@ def __init__(self, name, artist, release_date, genre, best_song, overall_rating,
     self.best_song = best_song
     self.overall_rating = overall_rating
     self.cover = cover
+    self.text = text
     self.songname = name
     self.albumid = albumid
     self.rating = rating
