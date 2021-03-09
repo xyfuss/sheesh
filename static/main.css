@@ -108,10 +108,16 @@ footer img {
   margin-bottom: 80px;
 }
 
+#artist {
+  position: relative;
+  bottom: 200px;
+  left: 40%;
+  width: 600px;
+}
+
 #songlist {
   position: relative;
   width: 50%;
-  background-color: teal;
   left: 40%;
   bottom: 200px;
   height: 43px;
@@ -122,6 +128,21 @@ footer img {
   margin-top: 30px;
   margin-left: 30px;
   width: 30%;
+}
+
+#rating {
+  position: relative;
+  bottom: 220px;
+  left: 70%;
+  height: 60px;
+  width: 60px;
+  background-color: #61d2a4;
+  border-radius: 50%;
+  text-align: center;
+}
+#rating h1 {
+  position: relative;
+  top: 10px;
 }
 
 #albumtitle {
