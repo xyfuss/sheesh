@@ -7,7 +7,7 @@
     <title>Mumble</title>
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='main.css') }}"
+      href="{{ url_for('static', filename='main.csss') }}"
     />
   </head>
   <body>
@@ -18,19 +18,24 @@
     </header>
     <div id="mainbody">
       {% for album in musikkalbum %}
-      <img id="albumcover" src="../static/img/{{album.cover}}" alt="" />
+      <div id="left">
+        <img id="albumcover" src="../static/img/{{album.cover}}" alt="" />
+        <p id="short_text">{{album.text}}</p>
+      </div>
       <h1 id="albumtitle">{{album.name}}</h1>
-      <h2 id="date">{{album.release_date}}</h2>
       <h1 id="artist">{{album.artist}}</h1>
+      <h2 id="date">{{album.release_date}}</h2>
       <div id="rating">
         <h1>{{album.overall_rating}}</h1>
       </div>
-      <p id="short_text">{{album.text}}</p>
+      
       {% for sang in sanger %}
       <div id="songlist">
         <h2 id="songtrack">{{sang.track_number}}</h2>
         <h3 id="songtitle">{{sang.name}}</h3>
       </div>
+
+      
       {% endfor %} {% endfor %}
     </div>
     <footer>
