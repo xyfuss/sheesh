@@ -1,5 +1,6 @@
 body {
   margin: auto;
+  font-family: acumin-pro, sans-serif;
 }
 #main {
   margin: 45px;
@@ -99,6 +100,7 @@ footer img {
   background-color: black;
   color: white;
   width: 75%;
+  padding-bottom: 30px;
   position: relative;
   margin: auto;
   margin-top: 45px;
@@ -112,6 +114,7 @@ footer img {
   position: relative;
   left: 40%;
   width: 600px;
+  top: 70px;
 }
 
 #songlist {
@@ -125,6 +128,7 @@ footer img {
 #date {
   position: relative;
   left: 80%;
+  width: 20px;
 }
 
 #albumcover {
@@ -158,6 +162,7 @@ footer img {
   left: 37%;
   color: #61d2a4;
   width: 600px;
+  top: 70px;
 }
 
 #songtrack {
@@ -178,4 +183,5 @@ footer img {
   width: 70%;
   position: relative;
   font-size: 15px;
+  font-style: italic;
 }
