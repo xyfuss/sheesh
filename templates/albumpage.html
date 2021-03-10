@@ -24,6 +24,7 @@
       <div id="rating">
         <h1>{{album.overall_rating}}</h1>
       </div>
+      <p id="short_text">{{album.text}}</p>
       {% for sang in sanger %}
       <div id="songlist">
         <h2 id="songtrack">{{sang.track_number}}</h2>
@@ -32,8 +33,7 @@
       {% endfor %} {% endfor %}
     </div>
     <footer>
-        <img src="../static/img/mublbelogo.png" alt="" />
+      <img src="../static/img/mublbelogo.png" alt="" />
     </footer>
-
   </body>
 </html>

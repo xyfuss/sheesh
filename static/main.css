@@ -165,3 +165,11 @@ footer img {
   left: 35px;
   bottom: 38px;
 }
+#short_text {
+  color: white;
+  bottom: 200px;
+  margin-left: 30px;
+  width: 30%;
+  position: relative;
+  font-size: 15px;
+}
