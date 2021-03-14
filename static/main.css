@@ -185,3 +185,44 @@ footer img {
   font-size: 15px;
   font-style: italic;
 }
+
+/* ABOUT US */
+
+#about_link {
+  left: 500px;
+  bottom: 50px;
+  font-size: 28px;
+  text-decoration: none;
+  color: white;
+}
+
+#about_main {
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#about_main h1 {
+  color: black;
+}
+
+#about_text {
+  color: black;
+  width: 40%;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#about-footer {
+  height: 18vh;
+  background-color: black;
+  bottom: 0;
+  width: 100%;
+}
+#about-footer img {
+  height: 70%;
+  position: relative;
+  left: 20%;
+  top: 20%;
+}
