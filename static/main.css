@@ -218,10 +218,57 @@ footer img {
   height: 18vh;
   background-color: black;
   width: 100%;
+  bottom: 0;
+  position: absolute;
 }
 #about-footer img {
   height: 70%;
   position: relative;
   left: 20%;
   top: 20%;
+}
+
+#about_link2 {
+  left: 500px;
+  bottom: 50px;
+  font-size: 28px;
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 550px) {
+  #main {
+    grid-template-columns: 1fr;
+  }
+  header img {
+    left: 0;
+  }
+  #about_link {
+    left: 0;
+    margin: auto;
+    top: 20px;
+    color: black;
+  }
+  header {
+    text-align: center;
+  }
+  #mainbody {
+    width: 95%;
+  }
+  #about-footer {
+    position: relative;
+    width: 100%;
+  }
+
+  #about_link2 {
+    display: none;
+    left: 0;
+    margin: auto;
+    top: 20px;
+    color: black;
+  }
+
+  #about_text {
+    width: 60%;
+  }
 }
